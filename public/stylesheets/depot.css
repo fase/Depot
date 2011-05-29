@@ -1,5 +1,13 @@
 /* Global styles */
 
+body {
+	margin: 0px;
+}
+
+#store .entry form, #store .entry form div {
+	display: inline;
+}
+
 #banner {
 	background: #9c9;
 	padding-top: 10px;
