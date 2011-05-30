@@ -16,14 +16,14 @@ class ApplicationController < ActionController::Base
   end
 
   def update_counter
-    counter = 1
-
-    if !session[:counter].nil?
-      counter = session[:counter] + 1
+    #if session var exists, increment it.
+    #else, set it to 1.
+    if session[:counter]
+      session[:counter] += 1
+    else
+      session[:counter] = 1;
     end
 
-    session[:counter] = counter
-
-    counter
+    session[:counter]
   end
 end
