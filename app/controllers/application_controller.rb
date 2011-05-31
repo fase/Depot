@@ -12,18 +12,11 @@ class ApplicationController < ActionController::Base
   end
 
   def reset_counter
-    session[:counter] = nil if !session[:counter].nil?
+    session[:counter] = nil if session[:counter]
   end
 
   def update_counter
-    #if session var exists, increment it.
-    #else, set it to 1.
-    if session[:counter]
-      session[:counter] += 1
-    else
-      session[:counter] = 1;
-    end
-
-    session[:counter]
+    # If counter, add one to current value.  Else, set equal to 1.
+    session[:counter] ? session[:counter] += 1 : session[:counter] = 1
   end
 end
