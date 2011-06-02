@@ -14,10 +14,10 @@
   </div>
   <div id="columns">
     <div id="side">
-      <a href="http://www....">Home</a><br />
-      <a href="http://www..../faq">Questions</a><br />
-      <a href="http://www..../news">News</a><br />
-      <a href="http://www..../contact">Contact</a><br />
+      <%= link_to "Home", :controller => "store", :action => "index" %><br />
+      <a href="#">Questions</a><br />
+      <a href="#">News</a><br />
+      <a href="#">Contact</a><br />
       <p>
         <div style="color: white;">User connected at:</div>
         <div style="color: white; padding-left: 15px;"><%= I18n.l Date.today %> <%=I18n.l Time.now %></div>
